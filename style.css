@@ -1,0 +1,259 @@
+:root {
+  --nav-footer-background-color: #4e4e4e;
+  --nav-footer-font-size: 18px;
+  --h2-fontsize: 36px;
+  --h2-fontweight: bold;
+  --p-info-employees-font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: url(images/background_img.png);
+  background-size: cover;
+}
+
+.header_shadow {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/shadow_img.png);
+}
+
+.header_container {
+  width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-title {
+  font-size: var(--h2-fontsize);
+  font-weight: var(--h2-fontweight);
+  margin-bottom: 62px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 43px;
+}
+
+.btn-offer {
+  width: 164px;
+  height: 41px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.navigation {
+  width: 100%;
+  height: 50px;
+  background-color: var(--nav-footer-background-color);
+}
+
+.nav-page {
+  display: flex;
+  gap: 46px;
+}
+
+.nav-container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--nav-footer-font-size);
+}
+
+.mycompany {
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  color: #f1f1f1;
+}
+
+.nav {
+  text-decoration: none;
+}
+.contact {
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .btn-offer:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.aboutus {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus-container {
+  width: 960px;
+  height: 100vh;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+}
+
+.title-aboutus {
+  font-size: var(--h2-fontsize);
+  font-weight: var(--h2-fontweight);
+  color: #152d41;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.employees {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.info {
+  font-size: var(--p-info-employees-font-size);
+}
+
+.name-employee {
+  margin-bottom: 10px;
+}
+
+.employees:nth-of-type(even) {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
+.offer {
+  width: 100%;
+  height: calc(100vh - 71px);
+  background-color: rgba(64, 93, 120, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.offer-container {
+  width: 960px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.title-offer {
+  font-size: var(--h2-fontsize);
+  font-weight: var(--h2-fontweight);
+  color: #fff;
+}
+
+.offer-grid-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 63px;
+  place-items: center;
+}
+
+.grid-item {
+  width: 198px;
+  height: 198px;
+  background-color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-item:hover {
+  animation-name: grow-item;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes grow-item {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.first-service {
+  position: relative;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgba(224, 122, 100, 1);
+  position: absolute;
+  top: -11px;
+  left: -11px;
+}
+
+.footer {
+  width: 100%;
+  height: 71px;
+  background-color: var(--nav-footer-background-color);
+}
+
+.footer-container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  font-size: var(--nav-footer-font-size);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
