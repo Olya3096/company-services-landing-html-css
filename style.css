@@ -10,8 +10,52 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+}
+
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navigation {
+  width: 100%;
+  height: 50px;
+  background-color: var(--nav-footer-background-color);
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--nav-footer-font-size);
+}
+
+.nav {
+  text-decoration: none;
+}
+
+.mycompany {
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-page {
+  display: flex;
+  gap: 46px;
+}
+
+.nav-links {
+  color: #f1f1f1;
+}
+
+.contact {
+  cursor: not-allowed;
 }
 
 .header {
@@ -25,23 +69,24 @@
   width: 100%;
   height: 100%;
   background-image: url(images/shadow_img.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header_container {
   width: 960px;
-  height: 100vh;
-  margin: 0 auto;
+  margin: auto;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .main-title {
   font-size: var(--h2-fontsize);
   font-weight: var(--h2-fontweight);
   margin-bottom: 62px;
+  width: 600px;
 }
 
 .title {
@@ -58,44 +103,11 @@
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-  transition-duration: 1s;
-}
-
-.navigation {
-  width: 100%;
-  height: 50px;
-  background-color: var(--nav-footer-background-color);
-}
-
-.nav-page {
-  display: flex;
-  gap: 46px;
-}
-
-.nav-container {
-  width: 960px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--nav-footer-font-size);
-}
-
-.mycompany {
-  font-weight: bold;
-  color: #fff;
-}
-
-.nav-links {
-  color: #f1f1f1;
-}
-
-.nav {
   text-decoration: none;
-}
-.contact {
-  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 1s;
 }
 
 @media (hover: hover) {
@@ -107,24 +119,32 @@
 
 .aboutus {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .aboutus-container {
   width: 960px;
-  height: 100vh;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
-  gap: 15%;
 }
 
 .title-aboutus {
   font-size: var(--h2-fontsize);
   font-weight: var(--h2-fontweight);
   color: #152d41;
+  margin-bottom: 78px;
+}
+
+.employees {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.first-employee {
+  margin-bottom: 46px;
 }
 
 .photo {
@@ -132,12 +152,6 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.employees {
-  display: flex;
-  gap: 60px;
-  align-items: center;
 }
 
 .info {
@@ -155,15 +169,18 @@
 
 .offer {
   width: 100%;
-  height: calc(100vh - 71px);
   background-color: rgba(64, 93, 120, 1);
+}
+
+.offer-shadow {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
 }
 
 .offer-container {
   width: 960px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 50px 0;
@@ -173,11 +190,11 @@
   font-size: var(--h2-fontsize);
   font-weight: var(--h2-fontweight);
   color: #fff;
+  margin-bottom: 83px;
 }
 
 .offer-grid-container {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,7 +204,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 63px;
-  place-items: center;
 }
 
 .grid-item {
@@ -196,32 +212,25 @@
   background-color: #fff;
   font-size: 24px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
 }
 
-.grid-item:hover {
-  animation-name: grow-item;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-}
-
-@keyframes grow-item {
-  0% {
-    transform: scale(1);
-  }
-  50% {
+@media (hover: hover) {
+  .grid-item:hover {
     transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 
 .first-service {
   position: relative;
+}
+
+.inf-about-service {
+  font-size: 18px;
 }
 
 .circle {
@@ -238,11 +247,12 @@
   width: 100%;
   height: 71px;
   background-color: var(--nav-footer-background-color);
+  display: flex;
+  align-items: center;
 }
 
 .footer-container {
   width: 960px;
-  height: 100%;
   margin: 0 auto;
   font-size: var(--nav-footer-font-size);
   color: #fff;
