@@ -20,8 +20,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
 .navigation {
-  width: 100%;
   height: 50px;
   background-color: var(--nav-footer-background-color);
   display: flex;
@@ -29,8 +33,6 @@ body {
 }
 
 .nav-container {
-  width: 960px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   font-size: var(--nav-footer-font-size);
@@ -59,14 +61,12 @@ body {
 }
 
 .header {
-  width: 100%;
   height: calc(100vh - 50px);
   background-image: url(images/background_img.png);
   background-size: cover;
 }
 
 .header_shadow {
-  width: 100%;
   height: 100%;
   background-image: url(images/shadow_img.png);
   display: flex;
@@ -75,8 +75,6 @@ body {
 }
 
 .header_container {
-  width: 960px;
-  margin: auto;
   color: white;
   display: flex;
   flex-direction: column;
@@ -118,33 +116,28 @@ body {
 }
 
 .aboutus {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .aboutus-container {
-  width: 960px;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
+  gap: 46px;
 }
 
 .title-aboutus {
   font-size: var(--h2-fontsize);
   font-weight: var(--h2-fontweight);
   color: #152d41;
-  margin-bottom: 78px;
+  padding-bottom: 28px;
 }
 
 .employees {
   display: flex;
   gap: 60px;
   align-items: center;
-}
-
-.first-employee {
-  margin-bottom: 46px;
 }
 
 .photo {
@@ -168,19 +161,16 @@ body {
 }
 
 .offer {
-  width: 100%;
   background-color: rgba(64, 93, 120, 1);
 }
 
 .offer-shadow {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
 }
 
 .offer-container {
-  width: 960px;
   display: flex;
   flex-direction: column;
   padding: 50px 0;
@@ -194,7 +184,6 @@ body {
 }
 
 .offer-grid-container {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,7 +233,6 @@ body {
 }
 
 .footer {
-  width: 100%;
   height: 71px;
   background-color: var(--nav-footer-background-color);
   display: flex;
@@ -252,8 +240,6 @@ body {
 }
 
 .footer-container {
-  width: 960px;
-  margin: 0 auto;
   font-size: var(--nav-footer-font-size);
   color: #fff;
   font-weight: bold;
